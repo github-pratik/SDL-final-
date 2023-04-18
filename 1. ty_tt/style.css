@@ -1,0 +1,85 @@
+/* Center the table */
+table {
+    margin: auto;
+  }
+  
+  /* Style the table header */
+  th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  /* Style the table cells */
+  td {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* Style the table rows */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Add some space below the table */
+  table {
+    margin-bottom: 50px;
+  }
+  
+  /* Add some margin to the page heading */
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Add some padding to the container */
+  .container {
+    padding: 0 20px;
+  }
+  
+  /* Add some border and padding to the container */
+  .container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Style the "About" section */
+  .row h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .row p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Style the "Contact Us" section */
+  .contact h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .contact i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .contact a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  

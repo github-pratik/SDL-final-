@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="registration-form">
+      <h1>Sign Up</h1>
+      <p>Create a new account.</p>
+      <hr />
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" required />
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" minlength="8" required />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" minlength="8" required />
+
+      <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <script src="validate.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+/* table header style */
+th {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* table cell style */
+td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* alternate row background color */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* hover effect on table rows */
+tbody tr:hover {
+  background-color: #e8f0fe;
+}
+
+/* header style */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #007bff;
+}
+
+/* container style */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}

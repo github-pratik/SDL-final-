@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="school.xsd">
+    <school>
+        <rollno>001</rollno>
+        <name>John Doe</name>
+        <branch>IT</branch>
+        <credits>100000</credits>
+    </school>
+    <school>
+        <rollno>002</rollno>
+        <name>Jane Smith</name>
+        <branch>CS</branch>
+        <credits>90000</credits>
+    </school>
+</school>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Railway Time Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Railway Time Table</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Train No.</th>
+          <th>Train Name</th>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Frequency</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12345</td>
+          <td>Express</td>
+          <td>New Delhi</td>
+          <td>Mumbai</td>
+          <td>10:00 AM</td>
+          <td>8:00 PM</td>
+          <td>Daily</td>
+          <td>
+            <a href="#" class="edit-btn">Edit</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>67890</td>
+          <td>Superfast</td>
+          <td>Kolkata</td>
+          <td>Chennai</td>
+          <td>12:00 PM</td>
+          <td>10:00 PM</td>
+          <td>Monday, Wednesday, Friday</td>
+          <td>
+            <a href="#" class="edit-btn">Edit</a>
+            <a href="#" class="delete-btn">Delete</a>
+          </td>
+        </tr>
+        <!-- Add more train details here -->
+      </tbody>
+    </table>
+
+    <!-- Search section -->
+    <div class="search">
+      <h3>Search Trains</h3>
+      <form>
+        <label for="search-from">From</label>
+        <input type="text" id="search-from" placeholder="Enter origin city...">
+        <label for="search-to">To</label>
+        <input type="text" id="search-to" placeholder="Enter destination city...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- Add Train section -->
+    <div class="add">
+      <h3>Add Train</h3>
+      <form>
+        <label for="train-no">Train No.</label>
+        <input type="text" id="train-no" placeholder="Enter train number...">
+        <label for="train-name">Train Name</label>
+        <input type="text" id="train-name" placeholder="Enter train name...">
+        <label for="origin">Origin</label>
+        <input type="text" id="origin" placeholder="Enter origin city...">
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" placeholder="Enter destination city...">
+        <label for="departure-time">Departure Time</label>
+        <input type="text" id="departure-time" placeholder="Enter departure time...">
+        <label for="arrival-time">Arrival Time</label>
+        <input type="text" id="arrival-time" placeholder="Enter arrival time...">
+        <label for="frequency">Frequency</label>
+        <input type="text" id="frequency" placeholder="Enter frequency...">
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<!-- Edit Train section -->
+<div class="edit">
+  <h3>Edit Train</h3>
+  <form>
+    <label for="edit-train-no">Train No.</label>
+    <input type="text" id="edit-train-no" placeholder="Enter train number...">
+    <label for="edit-train-name">Train Name</label>
+    <input type="text" id="edit-train-name" placeholder="Enter train name...">
+    <label for="edit-origin">Origin</label>
+    <input type="text" id="edit-origin" placeholder="Enter origin city...">
+    <label for="edit-destination">Destination</label>
+    <input type="text" id="edit-destination" placeholder="Enter destination city...">
+    <label for="edit-departure-time">Departure Time</label>
+    <input type="text" id="edit-departure-time" placeholder="Enter departure time...">
+    <label for="edit-arrival-time">Arrival Time</label>
+    <input type="text" id="edit-arrival-time" placeholder="Enter arrival time...">
+    <label for="edit-frequency">Frequency</label>
+    <input type="text" id="edit-frequency" placeholder="Enter frequency...">
+    <button type="submit">Update</button>
+    <button type="button" class="cancel-btn">Cancel</button>
+  </form>
+</div>
+</div>
+</body>
+</html>
