@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid Component</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- component template -->
+    <script type="text/x-template" id="grid-template">
+      <table>
+        <thead>
+          <tr>
+            <th v-for="key in columns"
+              @click="sortBy(key)"
+              :class="{ active: sortKey == key }">
+              {{ key  }}
+              <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="entry in filteredPeoples">
+            <td v-for="key in columns">
+              {{entry[key]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </script>
+  </head>
+  <body>
+    <!-- demo root element -->
+    <div id="demo">
+      <form id="search">
+        Search <input name="query" v-model="searchQuery" /> <br>
+        Name <input name="name" v-model="nameVM" /> <br>
+        Age <input name="age" v-model="ageVM" /> <br>
+        Grade <input name="grade" v-model="gradeVM" /> <br>
+        <input type="button" value="add" name="add" @click="addPerson"/>
+      </form>
+      <demo-grid
+        :peoples="gridData"
+        :columns="gridColumns"
+        :filter-key="searchQuery"
+      >
+      </demo-grid>
+    </div>
+
+    <script>
+    const { createApp } = Vue
+        
+    // bootstrap the demo
+    const app = createApp({
+        data: function() {
+            return {
+                searchQuery: "",
+                gridColumns: ["name", "age", "grade"],
+                nameVM: "",
+                ageVM: "",
+                gradeVM: "",
+                gridData: [
+                    { name: "Virat Kolhi", age: 22, grade: 'A+' },
+                    { name: "MS Dhoni", age: 25, grade: 'B+' },
+                    { name: "Sachin Tendulkar", age: 31, grade: 'A-' },
+                    { name: "Ravindra Jadeja", age: 30, grade: 'B-' }
+                ]
+            }
+        },
+        methods: {
+            addPerson: function(){
+                this.gridData.push({name: this.nameVM, age: this.ageVM, grade: this.gradeVM});
+                this.nameVM = this.gradeVM = this.ageVM = ""
+            }
+        }
+      });
+
+
+      // register the grid component
+      app.component("demo-grid",
+      {
+        template: "#grid-template",
+        props: {
+          peoples: Array,
+          columns: Array,
+          filterKey: String
+        },
+        data: function() {
+          var sortOrders = {};
+          this.columns.forEach(function(key) {
+            sortOrders[key] = 1;
+          });
+          return {
+            sortKey: "",
+            sortOrders: sortOrders
+          };
+        },
+        computed: {
+          filteredPeoples: function() {
+            var sortKey = this.sortKey;
+            var filterKey = this.filterKey && this.filterKey.toLowerCase();
+            var order = this.sortOrders[sortKey] || 1;
+            var peoples = this.peoples;
+            if (filterKey) {
+                peoples = peoples.filter(function(row) {
+                return Object.keys(row).some(function(key) {
+                  return (
+                    String(row[key])
+                      .toLowerCase()
+                      .indexOf(filterKey) > -1
+                  );
+                });
+              });
+            }
+            if (sortKey) {
+                peoples = peoples.slice().sort(function(a, b) {
+                a = a[sortKey];
+                b = b[sortKey];
+                return (a === b ? 0 : a > b ? 1 : -1) * order;
+              });
+            }
+            return peoples;
+          }
+        },
+        filters: {
+          capitalize: function(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+          }
+        },
+        methods: {
+          sortBy: function(key) {
+            this.sortKey = key;
+            this.sortOrders[key] = this.sortOrders[key] * -1;
+          }
+        }
+      }
+      );
+
+      app.mount("#demo");
+    </script>
+  </body>
+</html>

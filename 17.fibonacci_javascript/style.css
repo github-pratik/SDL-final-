@@ -1,0 +1,42 @@
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  label {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  input[type="number"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 24px;
+  }
+  
+  button {
+    background-color: rgb(0, 247, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  #output {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+  }
+  

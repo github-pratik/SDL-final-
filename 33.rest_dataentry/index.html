@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Data Entry Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Restaurant Data Entry Form</h1>
+  
+  <form>
+    <table>
+      <tr>
+        <th colspan="2">General Information</th>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name="name" required></td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><input type="text" name="address"></td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td><input type="tel" name="phone"></td>
+      </tr>
+      
+      <tr>
+        <th colspan="2">Cuisine Types</th>
+      </tr>
+      <tr>
+        <td>Italian:</td>
+        <td><input type="checkbox" name="cuisine[]" value="italian"></td>
+      </tr>
+      <tr>
+        <td>Indian:</td>
+        <td><input type="checkbox" name="cuisine[]" value="indian"></td>
+      </tr>
+      <tr>
+        <td>Chinese:</td>
+        <td><input type="checkbox" name="cuisine[]" value="chinese"></td>
+      </tr>
+      
+      <tr>
+        <th colspan="2">Special Events</th>
+      </tr>
+      <tr>
+        <td>Birthday Party:</td>
+        <td><input type="radio" name="event" value="birthday"></td>
+      </tr>
+      <tr>
+        <td>Anniversary:</td>
+        <td><input type="radio" name="event" value="anniversary"></td>
+      </tr>
+      <tr>
+        <td>Corporate:</td>
+        <td><input type="radio" name="event" value="corporate"></td>
+      </tr>
+      
+      <tr>
+        <td colspan="2"><input type="submit" value="Submit"></td>
+      </tr>
+    </table>
+  </form>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grid Component</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+  <!-- demo root element -->
+  <div id="demo">
+    <!DOCTYPE html>
+
+    <h2>Login Page</h2><br>
+    <div class="login">
+      <div class="alert">
+        {{ alertText }}
+        {{ username }}
+        <div>
+          <form id="login" method="get">
+            <label><b>User Name
+              </b>
+            </label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username" v-model="username">
+            <br><br>
+            <label><b>Password
+              </b>
+            </label>
+            <input type="Password" name="Pass" id="Pass" placeholder="Password" v-model="password">
+            <br><br>
+            <input type="button" name="log" id="log" value="Log In Here" @click="login">
+            <br>
+          </form>
+        </div>
+
+        <script>
+          const { createApp } = Vue // named import
+
+          // bootstrap the demo
+          const app = createApp({
+            data: function () {
+              return {
+                username: "",
+                password: "",
+                alertText: ""
+              }
+            },
+            methods: {
+              login: function () {
+                if (this.username == "admin" && this.password == "admin") {
+                  this.alertText = "Successfully Logged In";
+                } else {
+                  this.alertText = "Invalid credentials";
+                }
+              }
+            }
+
+          });
+
+          app.mount("#demo");
+
+        </script>
+</body>
+
+</html>

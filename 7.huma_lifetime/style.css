@@ -1,0 +1,58 @@
+body {
+    background-color: #F2F2F2;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#weeks {
+    font-weight: bold;
+}
+
+#greeting {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    color: #333333;
+}
+
+footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+

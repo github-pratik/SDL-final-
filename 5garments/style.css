@@ -1,0 +1,81 @@
+/* Set body background color */
+body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Set header background color */
+  .navbar {
+    background-color: #333;
+  }
+  
+  /* Set header text color */
+  .navbar a {
+    color: white;
+  }
+  
+  /* Set active page link color */
+  .navbar .active {
+    color: #f2f2f2;
+  }
+  
+  /* Style container */
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+  }
+  
+  /* Style form input fields */
+  .form-group input,
+  .form-group textarea {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style form submit button */
+  .btn-primary {
+    background-color: rgb(92, 52, 52);
+    border: none;
+    border-radius: 0;
+  }
+  
+  /* Style product cards */
+  .card {
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+  }
+  
+  /* Style product card image */
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Style product card title */
+  .card-title {
+    margin-bottom: 0;
+  }
+  
+  /* Style product card price */
+  .price {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+  }
+
+
+  
+  /* Style footer */
+  .footer {
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+  }
+  
